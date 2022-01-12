@@ -1,0 +1,19 @@
+{
+  "name": "pro-readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woffordlm/pro-readme-generator.git"
+  },
+  "author": "luke wofford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woffordlm/pro-readme-generator/issues"
+  },
+  "homepage": "https://github.com/woffordlm/pro-readme-generator#readme"
+}
