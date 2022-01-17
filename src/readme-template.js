@@ -1,9 +1,8 @@
 function generateMarkDown(templateData) {
-    // destructure page data by section
-//    console.log('templatedata:', templatedata)
-// const { projects, about, ...header } = templateData;
-    return 
-    `  ## ${templateData.projectName}
+    console.log('templateData:', templateData)
+    return`
+
+    ## ${templateData.projectName}
        # Description
         ${templateData.description}
        # Table of Contents
@@ -19,6 +18,12 @@ function generateMarkDown(templateData) {
        ${templateData.testCommand}
        ${templateData.repoInfo}
        ${templateData.contributionInfo}
-       `
+    
+    `
 }
+    
+   
 module.exports = generateMarkDown
+
+
+   
