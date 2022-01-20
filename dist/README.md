@@ -3,7 +3,7 @@
 
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   # Description 
-  This app automaticaclly generates random cocktail recipes
+  This app automatically generates a random cocktail upon request
   # Table of Contents
   - [Description](#description)
   - [Installation](#installation)
@@ -18,7 +18,7 @@
   <code>npm i</code>
   <br>
   ## Usage
-  clone code from repo to play around with the code
+  Git clone from the repo and then play around!
   ## Contributing
   luke wofford Github: [woffordlm](https://github.com/woffordlm)
   <br>
