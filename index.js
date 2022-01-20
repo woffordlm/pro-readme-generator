@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
+// imported files
 const writeFile = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./src/readme-template");
-// const renderLicenseBadge = require("./src/readme-template")
 
-// TODO: Create an array of questions for user input
+// this function runs through questions prompted by using the inquierer package and returns answers
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -42,12 +42,9 @@ const promptUser = () => {
     },
   ]);
 };
+// this function prompts project questions prompted by the inquerer package and returns answers
 const promptProjectQuestions = (answersData) => {
-  // console.log(answersData);
-  // if (!answersData.projects) {
-  //   answersData.projects = [];
-  // }
-  
+ 
 
   return inquirer.prompt([
     {
@@ -156,6 +153,7 @@ const promptProjectQuestions = (answersData) => {
   });
   
 };
+// this function prompts collaboration questions by the inquerer package and returns answers
 const promptCollaboration = (answersData) => {
   // console.log(answersData);
   if (!answersData.collaboration) {
@@ -209,7 +207,7 @@ const promptCollaboration = (answersData) => {
       });
 };
 
-// TODO: Create a function to initialize app
+// this fucntion sets up the initialization of the applicaiton
 function init() {
   promptUser()
   .then(promptCollaboration)
@@ -228,5 +226,5 @@ function init() {
     
 
 } 
-// Function call to initialize app
+// this calls the init function
 init();

@@ -1,9 +1,9 @@
 
-  <h1> Prost</h1> 
+  <h1> PROST</h1> 
 
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   # Description 
-  This app automatically generates a random cocktail upon request
+  this application automatically generates a random cocktail recipe
   # Table of Contents
   - [Description](#description)
   - [Installation](#installation)
@@ -18,9 +18,9 @@
   <code>npm i</code>
   <br>
   ## Usage
-  Git clone from the repo and then play around!
+  Push the big red button to generate a cocktail
   ## Contributing
-  luke wofford Github: [woffordlm](https://github.com/woffordlm)
+  john mcnair Github: [woffordlm](https://github.com/woffordlm)
   <br>
   ## License
   This project is protected under the MIT license

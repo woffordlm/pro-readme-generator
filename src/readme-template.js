@@ -1,10 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// this section creates the badge at the top of the readme
 function renderLicenseBadge(projects) {
-    return `![badge](https://img.shields.io/badge/license-${projects.license[0]}-brightgreen)`;
-  }
-  
-  
+    if (!projects) {
+        return '';
+    } else
+            return  `![badge](https://img.shields.io/badge/license-${projects.license[0]}-brightgreen)`;
+}
+    
+// this section generates the markdown page with destructured data
   function generateMarkDown(templateData) {
       const { userName, email, collaboration, projects } = templateData;
       return `
@@ -41,32 +43,8 @@ function renderLicenseBadge(projects) {
   Or you can find more of my work at my Github : [${userName}](https://github.com/${userName})<br />
   <br />`
   }
+//   this exports the page data
   module.exports = generateMarkDown;
   
-  // function renderLicenseSection(license) {
-  //     if (!license) {
-  //         return '';
-  //       }
-  //     return` #License: ${renderLicenseBadge}${}`
-  // }
-  
-  // TODO: Create a function that returns the license link
-  // If there is no license, return an empty string
-  // function renderLicenseLink(license) {
-  //     if (!license) {
-  //         return '';
-  //       }
-  //       return
-  // }
-  
-  // TODO: Create a function that returns the license link
-  // If there is no license, return an empty string
-  // function renderLicenseLink(license) {
-  //     if (!license) {
-  //         return '';
-  //       }
-  //       return
-  // }
-
 
   
