@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const writeFile = require("./utils/generateMarkdown");
-const copyFile = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./src/readme-template");
+// const renderLicenseBadge = require("./src/readme-template")
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -43,10 +43,10 @@ const promptUser = () => {
   ]);
 };
 const promptProjectQuestions = (answersData) => {
-  console.log(answersData);
-  if (!answersData.projects) {
-    answersData.projects = [];
-  }
+  // console.log(answersData);
+  // if (!answersData.projects) {
+  //   answersData.projects = [];
+  // }
   
 
   return inquirer.prompt([
@@ -81,7 +81,7 @@ const promptProjectQuestions = (answersData) => {
       name: "license",
       message:
         "WHat kind of license should your project have?(Check all that apply)",
-      choices: ["MIT", "Apache 2.0", "GPL", "BSD", "Node"],
+      choices: ["MIT", "Apache 2.0", "GPL", "BSD", "None"],
       validate: (licenseInput) => {
         if (licenseInput) {
           return true;
@@ -150,13 +150,14 @@ const promptProjectQuestions = (answersData) => {
     },
   ])
   .then((projectData) => {
-    answersData.projects.push(projectData);
+    answersData.projects=projectData;
+    console.log('answersData', answersData)
     return answersData
   });
   
 };
 const promptCollaboration = (answersData) => {
-  console.log(answersData);
+  // console.log(answersData);
   if (!answersData.collaboration) {
     answersData.collaboration = [];
   }
@@ -208,7 +209,9 @@ const promptCollaboration = (answersData) => {
       });
 };
 
-promptUser()
+// TODO: Create a function to initialize app
+function init() {
+  promptUser()
   .then(promptCollaboration)
   .then(promptProjectQuestions)
   .then((answersData) => {
@@ -222,10 +225,8 @@ promptUser()
     console.log(err);
   });
 
-// .then(writeFileResponse => {
-//   console.log(writeFileResponse);
-//   return copyFile();
-// })
-// // .then(copyFileResponse => {
-// //   console.log(copyFileResponse);
-// // })
+    
+
+} 
+// Function call to initialize app
+init();
